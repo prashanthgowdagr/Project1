@@ -5,7 +5,7 @@ apt install nginx -y
 
 systemctl enable --now nginx
 systemctl status nginx
-cat > /etc/nginx/conf.d/sites-enabled/default <<EOF
+cat > /etc/nginx/sites-enabled/default <<EOF
 
 server {
         listen 80 default_server;
