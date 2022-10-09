@@ -1,9 +1,7 @@
 version: '3.8'
 services:
  lb:
-  image: lb
-  build:
-   context: nginx
+  image: nginx
   networks:
    - app
   container_name: lb
