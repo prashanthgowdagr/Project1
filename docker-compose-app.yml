@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+ lb:
+  image: lb
+  build:
+   context: nginx
+  networks:
+   - app
+  container_name: lb
+  ports:
+   - 81:80
+  volumes:
+   - /root/nginx/lb/:/etc/nginx/nginx.conf
+   
+ app:
+  image_name: app
+  image: httpd
+  networks:
+   - app
+  ports:
+   - 80:80
+  volumes:
+    - /root/nginx/:/usr/local/apache2/htdocs/
+    
+    
