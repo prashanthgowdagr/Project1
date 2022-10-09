@@ -20,3 +20,8 @@ EOF
 systemctl enable --now nginx
 systemctl status nginx
 systemctl restart nginx
+
+
+apt-get install certbot
+apt-get install python3-certbot-nginx
+certbot --nginx -d pgr.q21.in
