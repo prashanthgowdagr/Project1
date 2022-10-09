@@ -7,7 +7,7 @@ upstream app {
 server {
         listen 80 default_server;
         listen [::]:80 default_server;
-server_name _;
+server_name pgr.q21.in;
 
         location / {
                 proxy_pass http://app;
