@@ -11,7 +11,7 @@ services:
    - /root/nginx/lb/:/etc/nginx/nginx.conf
    
  app:
-  image_name: app
+  container_name: app
   image: httpd
   networks:
    - app
@@ -20,4 +20,5 @@ services:
   volumes:
     - /root/nginx/:/usr/local/apache2/htdocs/
     
-    
+networks:
+ app:
